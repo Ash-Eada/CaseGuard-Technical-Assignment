@@ -1,0 +1,39 @@
+<div class="wrapper">
+  <!-- Sidebar  -->
+  <nav id="sidebar">
+    <div class="sidebar-header">
+      <h3>{{title}}</h3>
+      <strong>SV</strong>
+    </div>
+  </nav>
+
+  <!-- Page Content  -->
+  <div id="content">
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <button type="button" id="sidebarCollapse" class="btn btn-primary">
+          <i class="fas fa-bars"></i>
+        </button>
+        <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse"
+          data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+          aria-label="Toggle navigation">
+          <i class="fas fa-align-justify"></i>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="nav navbar-nav ml-auto">
+            <li class="nav-item">
+              <input #fileInput type="file" (change)="onChange($event)" [style.display]="'none'"/>
+              <a class="nav-link" href="#" (click)="fileInput.click()">{{fileName}}</a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </nav>
+
+    <app-shape-viewer></app-shape-viewer>
+
+  </div>
+</div>

@@ -1,0 +1,12 @@
+<svg  width="600" height="320">
+  <ng-container *ngFor="let shape of shapes">
+    <rect *ngIf="shape.type === 'Rectangle'" [attr.x]="shape.x" [attr.y]="shape.y " [attr.width]="shape.width "
+      [attr.height]="shape.height " [attr.fill]="shape.color"
+      [style.transform]="'rotate(' + shape.rotate + 'deg)'"/>
+    <circle *ngIf="shape.type === 'Circle'" [attr.cx]="shape.x + shape.width / 2"
+      [attr.cy]="shape.y + shape.height / 2 " [attr.r]="shape.width / 2 " [attr.fill]="shape.color"
+      [style.transform]="'rotate(' + shape.rotate + 'deg)'"/>
+    <polygon *ngIf="shape.type === 'Polygon'" [attr.points]="shape.points" [attr.fill]="shape.color"
+    [style.transform]="'rotate(' + shape.rotate + 'deg)'"/>
+  </ng-container>
+</svg>
